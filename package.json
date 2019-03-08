@@ -1,0 +1,48 @@
+{
+  "name": "",
+  "scripts": {
+    "start": "yarn build -w",
+    "build": "tsc --module commonjs",
+    "lint": "tslint -t codeFrame --project ."
+  },
+  "peerDependencies": {
+    "@types/node": "^11.10.4"
+  },
+  "devDependencies": {
+    "@types/jest": "^24.0.9",
+    "@types/node": "^11.10.4",
+    "jest": "^24.1.0",
+    "prettier": "^1.16.4",
+    "ts-jest": "^24.0.0",
+    "tslint": "^5.13.1",
+    "tslint-config-prettier": "^1.18.0",
+    "typescript": "^3.3.3333"
+  },
+  "jest": {
+    "transform": {
+      "^.+\\.(ts|tsx)$": "ts-jest"
+    },
+    "moduleFileExtensions": [
+      "js",
+      "ts"
+    ],
+    "testMatch": [
+      "**/__tests__/*.ts",
+      "**/?(*.)spec.ts"
+    ],
+    "collectCoverage": true,
+    "testURL": "http://localhost"
+  },
+  "lint-staged": {
+    "src/**/*.{ts,tsx}": [
+      "yarn pretty",
+      "yarn lint --fix",
+      "git add"
+    ]
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  }
+}

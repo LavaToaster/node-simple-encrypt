@@ -1,0 +1,32 @@
+
+
+{
+  "extends": [
+    "tslint:latest",
+    "tslint-config-prettier"
+  ],
+  "linterOptions": {
+    "exclude": [
+      "coverage/**/*.js",
+      "node_modules/**/*.ts",
+      "buildSchema.js",
+      "webpack.config.js",
+      "webpack.electron.config.js"
+    ]
+  },
+  "rules": {
+    "no-implicit-dependencies": [
+      true,
+      "dev"
+    ],
+    "max-classes-per-file": [
+      false
+    ],
+    "no-submodule-imports": [
+      false
+    ],
+    "no-default-export": true,
+    "object-literal-sort-keys": false,
+    "semicolon": [true, "always", "strict-bound-class-methods"]
+  }
+}
