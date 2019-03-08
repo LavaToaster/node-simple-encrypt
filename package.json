@@ -1,5 +1,6 @@
 {
-  "name": "",
+  "name": "node-simple-encrypt",
+  "license": "MIT",
   "scripts": {
     "start": "yarn build -w",
     "build": "tsc --module commonjs",
